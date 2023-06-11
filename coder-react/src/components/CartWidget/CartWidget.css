@@ -1,0 +1,11 @@
+
+.cartWidget {
+    padding-right: 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.fi-rr-shopping-cart{
+    font-size: 2rem
+}
