@@ -1,0 +1,29 @@
+.TopBar{
+    background-color: black;
+    color: white;
+    height: 3.5vh;
+    font-size: 0.9em;
+    display: flex;
+    align-items: center;
+}
+
+.TopBar p{
+    animation: textright 20s linear infinite;
+    backface-visibility: hidden;
+    margin: 0;
+    width: 100vw;
+}
+
+.TopBar p:hover{
+    animation-play-state: paused;
+}
+
+@keyframes textright {
+    from{
+        transform: translateX(100%);
+    }
+    to{
+        transform: translateX(-30%);
+    }
+    
+}
