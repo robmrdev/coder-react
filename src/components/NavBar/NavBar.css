@@ -1,54 +1,90 @@
-.navbar{
+header{
     height: 12vh;
-    justify-content: space-between!important;
+    display: grid;
+    grid-column-gap: 1.25rem;
+    grid-template-columns: (13, minmax(0, 1fr));
 }
+
+header i{
+    font-size: 20px;
+    padding: 7.5px 7.5px 0 7.5px;
+    border-radius: 50em;
+    &:hover{
+        background-color: rgb(205, 213, 221);
+    }
+}
+.headBarContainer{
+    grid-column: 2/14;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.navBrand{
+    width: 100px;
+}
+.navChoices{
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 0.75px;
+}
+
 .search_box{
+    flex-grow: 1;
     display: flex;
     align-items: center;
     height: 60px;
     margin: auto 0;
     border-radius: 50em;
     background-color: rgb(231, 237, 244);
-    width: 650px;
     &:hover{
         background-color: rgb(205, 213, 221);
     }
 }
-    input{
-        border: none;
-        height: 25px;
-        width: 100%;
-        padding-left: 20px;
-        font-size: 20px;
-        background: transparent;
-        outline: none;
+
+input{
+    border: none;
+    height: 25px;
+    width: 100%;
+    padding-left: 20px;
+    font-size: 20px;
+    background: transparent;
+    outline: none;
+}
+
+.search_box i{
+    padding: 17px 25px 13px 10px;
+    font-size: 20px;
+    border-radius:  0 50em 50em 0;
+    background-color: transparent;
+    background-image: linear-gradient(to right, rgba(190, 197, 205, 0) 50%, rgb(190, 197, 205) 50%);
+    background-size: 200% 100%;
+    background-position: left bottom;
+    transition: background-position 0.3s ease-in-out;
+    display: block;
+    &:hover {
+        background-position: right bottom;
     }
-    .search_box i{
-        padding: 17px 25px 13px 10px;
-        font-size: 20px;
-        border-top-right-radius: 50em;
-        border-bottom-right-radius: 50em;
-        background-color: transparent;
-        background-image: linear-gradient(to right, rgba(190, 197, 205, 0) 50%, rgb(190, 197, 205) 50%);
-        background-size: 200% 100%;
-        background-position: left bottom;
-        transition: background-position 0.3s ease-in-out;
-        display: block;
-        &:hover {
-            background-position: right bottom;
-        }
+}
+
+.navLogIn {
+    display: flex;
+    align-items: center;
+    padding-right: 10px;
+    padding-left:  2.5px;
+    border-radius: 50em;
+    &:hover{
+        background-color: rgb(205, 213, 221);
     }
 
-    
-    .navItems{
-        font-size: 1rem;
-        font-weight: bold;
-        font-family: 'Roboto', sans-serif;
-        letter-spacing: 0.75px;
-    }
-    .container{
-        margin-right: 0!important;
-        margin-left: 0!important;
-        width: 1600px;
-    }
+}
+.navLogIn p{
+    margin-bottom: 0;
+}
 
+.navIcons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}

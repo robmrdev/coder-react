@@ -1,31 +1,32 @@
 import React from 'react'
-import CartWidget from '../CartWidget/CartWidget';
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
 import TopBar from '../TopBar/TopBar';
+import CartWidget from '../CartWidget/CartWidget';
+import SideMenu from '../SideMenu/SideMenu';
 import './NavBar.css';
 
 const NavBar = () => {
+
   return (
     <>
-    <TopBar/>
-    <Navbar bg="light" variant="light">
-        <Container>
-          <Navbar.Brand href="#home">Nomad Spirit</Navbar.Brand>
-          <div className="search_box">
-              <input type="search" placeholder="What are you looking for?"></input>
-              <i className="fi fi-br-search"></i>
+      <TopBar/>
+      <header>
+          <SideMenu/>
+          <div className='headBarContainer'>
+            <div href="#home" className='navBrand'>Nomad Spirit</div>
+            <div className="search_box">
+                <input type="search" placeholder="What are you looking for?"></input>
+                <i className="fi fi-br-search"></i>
+            </div>
+            <span className='navIcons'>
+                <div className='navLogIn navHover'>
+                  <i className="fi fi-br-user"></i>
+                  <p>Log in or sign up</p>
+                </div>
+                <i className="fi fi-br-heart navHover"></i>          
+                <CartWidget/>
+            </span>
           </div>
-          <Nav className="navItems">
-            <Nav.Link href="#Tents">Tents</Nav.Link>
-            <Nav.Link href="#Backpacks">Backpacks</Nav.Link>
-            <Nav.Link href="#Sleeping Bags">Sleeping Bags</Nav.Link>
-            <Nav.Link href="#Usefull Gear">Usefull Gear</Nav.Link>
-          </Nav>
-        </Container>
-        <CartWidget/>
-      </Navbar>
+      </header>
     </>
   )
 }

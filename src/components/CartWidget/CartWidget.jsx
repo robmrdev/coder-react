@@ -4,7 +4,7 @@ import './CartWidget.css'
 const CartWidget = () => {
   return (
     <div className='cartWidget'>
-        <i class="fi fi-rr-shopping-cart"></i>
+        <i className="fi fi-br-basket-shopping-simple navHover"></i>
         <strong> 5 </strong>
     </div>
     )
