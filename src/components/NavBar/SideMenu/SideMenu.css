@@ -1,0 +1,73 @@
+.navBurguer{
+    grid-column: 1;
+    grid-row: 1;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 7%;
+    height: 12vh;
+
+}
+
+.offcanvasHeader{
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    justify-content: flex-end!important;
+    margin-bottom: 30px;
+}
+
+.offcanvasHeader img {
+    margin-left: 90px;
+}
+.offcanvasHeader button{
+
+    border-radius: 50em;
+    &:hover{
+        background-color: rgb(205, 213, 221);
+    }
+}
+
+.navBurguer i{
+    padding: 7.5px 7.5px 0 7.5px;
+    border-radius: 50em;
+    &:hover{
+        background-color: rgb(205, 213, 221);
+    }
+}
+
+.navBurguerContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+}
+
+ul{
+    list-style: none;
+    margin-left: 80px;
+}
+ul li a{
+    text-decoration: none;
+    color: black;
+}
+
+.navItemHighlight{
+    font-size: 40px;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+    padding-bottom: 20px;
+}
+
+.navItemMedium {
+    padding-bottom: 15px;
+}
+
+.navItemLow {
+    font-weight: 300;
+}
+
+.navItemSpace{
+    padding-top: 20px;
+}

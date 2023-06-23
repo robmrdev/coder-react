@@ -1,7 +1,7 @@
 import React from 'react'
-import TopBar from '../TopBar/TopBar';
-import CartWidget from '../CartWidget/CartWidget';
-import SideMenu from '../SideMenu/SideMenu';
+import TopBar from './TopBar/TopBar';
+import CartWidget from './CartWidget/CartWidget';
+import SideMenu from './SideMenu/SideMenu';
 import './NavBar.css';
 
 const NavBar = () => {
@@ -9,20 +9,20 @@ const NavBar = () => {
   return (
     <>
       <TopBar/>
+      <SideMenu/>
       <header>
-          <SideMenu/>
           <div className='headBarContainer'>
-            <div href="#home" className='navBrand'>Nomad Spirit</div>
+            <img src="https://www.ikea.com/nl/en/static/ikea-logo.f7d9229f806b59ec64cb.svg" alt="IKEA logo" />
             <div className="search_box">
                 <input type="search" placeholder="What are you looking for?"></input>
                 <i className="fi fi-br-search"></i>
             </div>
             <span className='navIcons'>
-                <div className='navLogIn navHover'>
+                <div className='navLogIn'>
                   <i className="fi fi-br-user"></i>
-                  <p>Log in or sign up</p>
+                  <strong>Log in or sign up</strong>
                 </div>
-                <i className="fi fi-br-heart navHover"></i>          
+                <i className="fi fi-br-heart"></i>          
                 <CartWidget/>
             </span>
           </div>
