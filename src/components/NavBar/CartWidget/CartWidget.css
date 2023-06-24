@@ -5,6 +5,38 @@
     align-items: center;
     gap: 15px;
 }
+@keyframes UpAndDown {
+    0%, 40%, 60%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+    transform: translateY(-6px);
+    }
+}
+.cartWidget p{
+    position: absolute;
+    display: flex;
+    border-radius: 50em;
+    background-color: rgba(41, 41, 179, 0.755);
+    color: white;
+    width: 16px;
+    height: 16px;
+    font-size: small;
+    align-items: center;
+    justify-content: center;
+    margin: 3px;
+    visibility: visible;
+    animation: UpAndDown 5s infinite;
+    animation-delay: 2s;
+}
+.cartWidget div{
+    width: 35px;
+    height: 37.5px;
+    position: absolute;
+    visibility: hidden;
+    display: flex;
+    justify-content: flex-end;
+}
 .fi-rr-shopping-cart{
     font-size: 2rem;
 }
