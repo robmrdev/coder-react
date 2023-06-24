@@ -3,18 +3,20 @@ import { useState } from 'react';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import './SideMenu.css'
 
-const SideMenu = () => {
+const SideMenu = ({ sideMenuAlign }) => {
+  const newClass = `navBurguer ${sideMenuAlign}`;
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
+
   return (
-    <div className='navBurguer'>
+    <div className={newClass}>
         <div className='navBurguerContainer'>
             <i class="fi fi-br-menu-burger" onClick={handleShow}></i>
             <strong>Menu</strong>
         </div>
-        <Offcanvas show={show} onHide={handleClose}>
+        <Offcanvas show={show} onHide={handleClose} className='sideMenuContainer'>
             <Offcanvas.Header closeButton className='offcanvasHeader'>
                 <Offcanvas.Title href="#home"><img src="https://www.ikea.com/nl/en/static/ikea-logo.f7d9229f806b59ec64cb.svg" alt="IKEA logo" />
                 </Offcanvas.Title>

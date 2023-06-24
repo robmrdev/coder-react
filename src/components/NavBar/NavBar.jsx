@@ -9,11 +9,11 @@ const NavBar = () => {
   return (
     <>
       <TopBar/>
-      <SideMenu/>
+      <SideMenu sideMenuAlign="sideMenuLeft"/>
       <header>
           <div className='headBarContainer'>
             <img src="https://www.ikea.com/nl/en/static/ikea-logo.f7d9229f806b59ec64cb.svg" alt="IKEA logo" />
-            <div className="search_box">
+            <div className="searchBox">
                 <input type="search" placeholder="What are you looking for?"></input>
                 <i className="fi fi-br-search"></i>
             </div>
@@ -24,6 +24,7 @@ const NavBar = () => {
                 </div>
                 <i className="fi fi-br-heart"></i>          
                 <CartWidget/>
+                <SideMenu sideMenuAlign="sideMenuRight"/>
             </span>
           </div>
       </header>

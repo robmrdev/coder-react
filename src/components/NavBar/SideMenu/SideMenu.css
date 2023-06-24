@@ -51,6 +51,9 @@ ul{
 ul li a{
     text-decoration: none;
     color: black;
+    &:hover{
+        text-decoration: underline;
+    }
 }
 
 .navItemHighlight{
@@ -70,4 +73,16 @@ ul li a{
 
 .navItemSpace{
     padding-top: 20px;
+}
+
+@media screen and (max-width: 500px){
+    ul{
+    margin-left: 20px;
+    }
+    .sideMenuContainer{
+        width: 300px!important;
+    }
+    .offcanvasHeader img {
+        margin-left: 30px;
+    }
 }
