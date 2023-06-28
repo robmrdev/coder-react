@@ -13,7 +13,7 @@ const misProductos = [
         name: "ÖSTANÖ",
         price: "20",
         description: "Chair",
-        hoverImg: "https://raw.githubusercontent.com/robmrivas/coder-react/blob/main/src/img/items/chairs/ostano-black-bg1.avif",
+        hoverImg: "https://raw.githubusercontent.com/robmrivas/coder-react/main/src/img/items/chairs/ostano-black-bg1.avif",
     },
     {
         id: "3",
