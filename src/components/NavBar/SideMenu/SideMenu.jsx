@@ -13,7 +13,7 @@ const SideMenu = ({ sideMenuAlign }) => {
   return (
     <div className={newClass}>
         <div className='navBurguerContainer'>
-            <i class="fi fi-br-menu-burger" onClick={handleShow}></i>
+            <i className="fi fi-br-menu-burger" onClick={handleShow}></i>
             <strong>Menu</strong>
         </div>
         <Offcanvas show={show} onHide={handleClose} className='sideMenuContainer'>
