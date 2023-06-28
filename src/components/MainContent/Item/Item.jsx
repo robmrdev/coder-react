@@ -1,24 +1,36 @@
 import React from "react";
 import { useState } from "react";
+import "./Item.css"
 
 const Item = ({ id, img, name, price, description, hoverImg }) => {
-    
-    // const [hoveredId, setHoveredId] = useState(null);
+  const [hoveredId, setHoveredId] = useState(null);
 
-    return (
-        <div>
-            <img src={img} alt={name} />
-            <h3>Nombre {name}</h3>
+  return (
+    <>
+        <div className="itemCard" key={id}>
+          <img
+            src={hoveredId === id ? hoverImg : img}
+            alt={name}
+            onMouseEnter={() => setHoveredId(id)}
+            onMouseLeave={() => setHoveredId(null)}
+            className={hoveredId === id ? "hoverItemImg" : ""}
+          />
+          <strong className="itemName">{name}</strong>
+          <p className="itemDescription">{description}</p>
+          <strong className="itemPrice">€ {price}</strong>
+          <div className="itemsButtons">
+            <i className="fi fi-br-basket-shopping-simple"></i>
+            <i className="fi fi-br-heart"></i>
+          </div>
         </div>
-    );
+    </>
+  );
 };
 
 export default Item;
 
-
-
-
-{/* <h2>Chairs</h2>
+{
+  /* <h2>Chairs</h2>
 <div className="items">
     {misProductos.map((chair) => (
         <div className="itemCard" key={chair.id}>
@@ -38,4 +50,5 @@ export default Item;
             </div>
         </div>
     ))}
-</div> */}
+</div> */
+}

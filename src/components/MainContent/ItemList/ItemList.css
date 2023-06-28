@@ -4,51 +4,5 @@
     justify-content: center;
     flex-wrap: wrap;
     gap: 3%;
+    grid-column: 2/14;
 }
-.itemCard{
-    width: 22%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-.items img {
-    width: 100%;
-}
-.items .itemPrice {
-    font-size: 1.7em;
-}
-.itemsButtons {
-    display: flex;
-    gap: 18px;
-}
-.itemsButtons i{
-    width: 36px;
-    height: 37px;
-    font-size: 18px;
-    padding: 9px 9px 10px 9px;
-    border-radius: 50em;
-    &:hover{
-        background-color: rgb(205, 213, 221);
-    }
-}
-.itemsButtons .fi-br-basket-shopping-simple{
-    background-color: rgb(37, 92, 165);
-    color: white;
-    &:hover{
-        background-color: rgb(25, 71, 132);
-    }
-}
-
-.hoverItemImg {
-    opacity: 0;
-    animation: fadeIn 0.4s ease-in forwards;
-  }
-
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
