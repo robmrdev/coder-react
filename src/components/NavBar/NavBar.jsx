@@ -12,7 +12,7 @@ const NavBar = () => {
       <SideMenu sideMenuAlign="sideMenuLeft"/>
       <header>
           <div className='headBarContainer'>
-            <img src="https://www.ikea.com/nl/en/static/ikea-logo.f7d9229f806b59ec64cb.svg" alt="IKEA logo" />
+            <img src="https://raw.githubusercontent.com/robmrivas/coder-react/main/src/img/logo.svg" alt="IKEA logo" />
             <div className="searchBox">
                 <input type="search" placeholder="What are you looking for?"></input>
                 <i className="fi fi-br-search"></i>
