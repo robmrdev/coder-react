@@ -1,6 +1,8 @@
 import React from "react";
 import { useState } from "react";
 import "./Item.css"
+import Counter from "../Counter/Counter";
+import { Link } from "react-router-dom";
 
 const Item = ({ id, img, name, price, description, hoverImg }) => {
   const [hoveredId, setHoveredId] = useState(null);
@@ -8,13 +10,15 @@ const Item = ({ id, img, name, price, description, hoverImg }) => {
   return (
     <>
         <div className="itemCard" key={id}>
-          <img
-            src={hoveredId === id ? hoverImg : img}
-            alt={name}
-            onMouseEnter={() => setHoveredId(id)}
-            onMouseLeave={() => setHoveredId(null)}
-            className={hoveredId === id ? "hoverItemImg" : ""}
-          />
+          <Link to={`/item/${id}`}>
+            <img
+              src={hoveredId === id ? hoverImg : img}
+              alt={name}
+              onMouseEnter={() => setHoveredId(id)}
+              onMouseLeave={() => setHoveredId(null)}
+              className={hoveredId === id ? "hoverItemImg" : ""}
+            />
+          </Link>
           <strong className="itemName">{name}</strong>
           <p className="itemDescription">{description}</p>
           <strong className="itemPrice">€ {price}</strong>
@@ -22,6 +26,7 @@ const Item = ({ id, img, name, price, description, hoverImg }) => {
             <i className="fi fi-br-basket-shopping-simple"></i>
             <i className="fi fi-br-heart"></i>
           </div>
+          <Counter stock={10} initial={1} />
         </div>
     </>
   );

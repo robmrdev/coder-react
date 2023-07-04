@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { useEffect } from "react"
+import "./Counter.css"
 
 
 const Counter = ({stock, initial}) => {
@@ -37,13 +38,13 @@ const Counter = ({stock, initial}) => {
     }
 
   return (
-    <>
-    <button onClick={decreaseCounter}> - </button>
-    <strong> {counter} </strong>
-    <button onClick={addCounter}> + </button>
+    <div className="counter">
+        <button onClick={decreaseCounter}> - </button>
+        <strong> {counter} </strong>
+        <button onClick={addCounter}> + </button>
 
-    <button onClick={addToCart} style={{backgroundColor:color}}> Add to Cart</button>
-    </>
+        <button onClick={addToCart} style={{backgroundColor:color}}> Add to Cart</button>
+    </div>
   )
 }
 

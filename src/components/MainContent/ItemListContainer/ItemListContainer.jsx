@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import Counter from "../Counter/Counter";
 import "./ItemListContainer.css";
 import { getProductos, getProductosPorCategoria } from "../../../asyncmock";
 import ItemList from "../ItemList/ItemList";
@@ -21,7 +20,6 @@ const ItemListContainer = ({ greeting }) => {
         <main>
             <div className='mainContainer'>
                 <h2 className='text-center m-4'> {greeting} </h2>
-                <Counter stock={10} initial={1} />
                 <ItemList productos={productos} />
             </div>
         </main>

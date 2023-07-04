@@ -28,13 +28,13 @@ const SideMenu = ({ sideMenuAlign }) => {
             <Offcanvas.Body>
                 <ul className="navChoices">
                     <li>
-                        <NavLink to="/Category/Chairs">Chairs</NavLink>
+                        <NavLink to="/category/Chairs">Chairs</NavLink>
                     </li>
                     <li>
-                        <NavLink to="/Category/Desks">Desks</NavLink>
+                        <NavLink to="/category/Desks">Desks</NavLink>
                     </li>
                     <li>
-                        <NavLink to="/Category/Wardroves">Wardroves</NavLink>
+                        <NavLink to="/category/Wardrobes">Wardrobes</NavLink>
                     </li>
                     {/* <li className='navItemHighlight'><a href="#Products">Products</a></li>
                     <li className='navItemHighlight'><a href="#Rooms">Rooms</a></li>
