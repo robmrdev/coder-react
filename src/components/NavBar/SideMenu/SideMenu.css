@@ -48,7 +48,7 @@ ul{
     list-style: none;
     margin-left: 80px;
 }
-ul li a{
+ul li{
     text-decoration: none;
     color: black;
     &:hover{
