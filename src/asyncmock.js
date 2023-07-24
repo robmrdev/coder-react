@@ -6,7 +6,8 @@ const misProductos = [
         price: "55",
         description: "Chair",
         hoverImg: "https://raw.githubusercontent.com/robmrivas/coder-react/main/src/img/items/chairs/karlpetter-green-bg1.avif",
-        idCat: "Chairs"
+        idCat: "Chairs",
+        Stock: 20
     },
     {
         id: "002",
@@ -15,7 +16,8 @@ const misProductos = [
         price: "20",
         description: "Chair",
         hoverImg: "https://raw.githubusercontent.com/robmrivas/coder-react/main/src/img/items/chairs/ostano-black-bg1.avif",
-        idCat: "Chairs"
+        idCat: "Chairs",
+        Stock: 20
     },
     {
         id: "003",
@@ -24,7 +26,8 @@ const misProductos = [
         price: "45",
         description: "Chair",
         hoverImg: "https://raw.githubusercontent.com/robmrivas/coder-react/main/src/img/items/chairs/lidas-white-bg1.avif",
-        idCat: "Chairs"
+        idCat: "Chairs",
+        Stock: 20
     },
     {
         id: "004",
@@ -33,7 +36,8 @@ const misProductos = [
         price: "70",
         description: "Armchair",
         hoverImg: "https://raw.githubusercontent.com/robmrivas/coder-react/main/src/img/items/chairs/poang-beige-bg1.avif",
-        idCat: "Chairs"
+        idCat: "Chairs",
+        Stock: 20
     },
     {
         id: "005",
@@ -42,7 +46,8 @@ const misProductos = [
         price: "90",
         description: "Desk, 105 x 50cm",
         hoverImg: "https://raw.githubusercontent.com/robmrivas/coder-react/main/src/img/items/desks/micke-white-bg1.avif",
-        idCat: "Desks"
+        idCat: "Desks",
+        Stock: 20
     },
     {
         id: "006",
@@ -51,7 +56,8 @@ const misProductos = [
         price: "150",
         description: "Desk combination, white, 77x154x147 cm",
         hoverImg: "https://raw.githubusercontent.com/robmrivas/coder-react/main/src/img/items/desks/kallax-white-bg1.webp",
-        idCat: "Desks"
+        idCat: "Desks",
+        Stock: 20
     },
     {
         id: "007",
@@ -60,7 +66,8 @@ const misProductos = [
         price: "169",
         description: "Desk, 140x65 cm",
         hoverImg: "https://raw.githubusercontent.com/robmrivas/coder-react/main/src/img/items/desks/malm-white-bg1.webp",
-        idCat: "Desks"
+        idCat: "Desks",
+        Stock: 20
     },
     {
         id: "008",
@@ -69,7 +76,8 @@ const misProductos = [
         price: "109",
         description: "Desk, 120x60 cm",
         hoverImg: "https://raw.githubusercontent.com/robmrivas/coder-react/main/src/img/items/desks/lagkapten-white-bg1.avif",
-        idCat: "Desks"
+        idCat: "Desks",
+        Stock: 20
     },
     {
         id: "009",
@@ -78,7 +86,8 @@ const misProductos = [
         price: "149",
         description: "Wardrobe with 3 doors, white, 117x176 cm",
         hoverImg: "https://raw.githubusercontent.com/robmrivas/coder-react/main/src/img/items/wardroves/kleppstad-white-bg1.avif",
-        idCat: "Wardrobes"
+        idCat: "Wardrobes",
+        Stock: 20
     },
     {
         id: "010",
@@ -87,7 +96,8 @@ const misProductos = [
         price: "179",
         description: "Wardrobe with 3 doors, black-brown, 117x176 cm",
         hoverImg: "https://raw.githubusercontent.com/robmrivas/coder-react/main/src/img/items/wardroves/rakkestad-black-bg1.avif",
-        idCat: "Wardrobes"
+        idCat: "Wardrobes",
+        Stock: 20
     },
     {
         id: "011",
@@ -96,7 +106,8 @@ const misProductos = [
         price: "229",
         description: "Wardrobe with 3 doors, white, 117x190 cm",
         hoverImg: "https://raw.githubusercontent.com/robmrivas/coder-react/main/src/img/items/wardroves/brimnes-white-bg1.webp",
-        idCat: "Wardrobes"
+        idCat: "Wardrobes",
+        Stock: 20
     },
     {
         id: "012",
@@ -105,7 +116,8 @@ const misProductos = [
         price: "59",
         description: "Wardrobe, light beige, 49x55x186 cm",
         hoverImg: "https://raw.githubusercontent.com/robmrivas/coder-react/main/src/img/items/wardroves/gursken-beige-bg1.webp",
-        idCat: "Wardrobes"
+        idCat: "Wardrobes",
+        Stock: 20
     },
 ];
 

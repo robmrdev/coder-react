@@ -3,23 +3,8 @@ import { useEffect } from "react"
 import "./Counter.css"
 
 
-const Counter = ({stock, initial}) => {
+const Counter = ({stock, initial, addToCart}) => {
     const [counter, setCounter] = useState (initial)
-    const [color, setColor] = useState ("lightgray")
-
-    // useEffect( () => {
-    //     document.title = `counter: ${counter}`;
-    // }, [counter]
-    // )
-
-    useEffect( () => {
-        if (counter>=5){
-            setColor("gray");
-        } else {
-            setColor("lightgray");
-        }
-    } ,[counter]
-    )
 
     const addCounter = () => {
         if (counter < stock) {
@@ -33,9 +18,6 @@ const Counter = ({stock, initial}) => {
         }
     }
 
-    const addToCart = () => {
-        console.log(`${counter} items added to cart`)
-    }
 
   return (
     <div className="counter">
@@ -43,7 +25,7 @@ const Counter = ({stock, initial}) => {
         <strong> {counter} </strong>
         <button onClick={addCounter}> + </button>
 
-        <button onClick={addToCart} style={{backgroundColor:color}}> Add to Cart</button>
+        <button onClick={() => addToCart(counter)}> Add to Cart</button>
     </div>
   )
 }

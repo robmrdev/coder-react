@@ -4,8 +4,14 @@ import "./Item.css"
 import Counter from "../Counter/Counter";
 import { Link } from "react-router-dom";
 
-const Item = ({ id, img, name, price, description, hoverImg }) => {
+const Item = ({ id, img, name, price, description, hoverImg, Stock }) => {
   const [hoveredId, setHoveredId] = useState(null);
+  const handlerAmount = (amount) => {
+    setAddItems (amount);
+    console.log(amount + " added")
+  }
+  
+  const [addItems, setAddItems] = useState (0);
 
   return (
     <>
@@ -26,7 +32,9 @@ const Item = ({ id, img, name, price, description, hoverImg }) => {
             <i className="fi fi-br-basket-shopping-simple"></i>
             <i className="fi fi-br-heart"></i>
           </div>
-          <Counter stock={10} initial={1} />
+          {
+              addItems > 0 ? (<Link to="/cart"> Go to CheckOut</Link>) : (<Counter initial={1} stock={Stock} addToCart={handlerAmount}/>)
+            }
         </div>
     </>
   );
@@ -34,26 +42,3 @@ const Item = ({ id, img, name, price, description, hoverImg }) => {
 
 export default Item;
 
-{
-  /* <h2>Chairs</h2>
-<div className="items">
-    {misProductos.map((chair) => (
-        <div className="itemCard" key={chair.id}>
-            <img
-                src={hoveredId === chair.id ? chair.hoverImg : chair.img}
-                alt={chair.name}
-                onMouseEnter={() => setHoveredId(chair.id)}
-                onMouseLeave={() => setHoveredId(null)}
-                className={hoveredId === chair.id ? "hoverItemImg" : ""}
-            />
-            <strong className="itemName">{chair.name}</strong>
-            <p className="itemDescription">{chair.description}</p>
-            <strong className="itemPrice">€ {chair.price}</strong>
-            <div className="itemsButtons">
-                <i className="fi fi-br-basket-shopping-simple"></i>
-                <i className="fi fi-br-heart"></i>
-            </div>
-        </div>
-    ))}
-</div> */
-}
