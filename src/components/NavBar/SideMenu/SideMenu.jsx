@@ -20,7 +20,7 @@ const SideMenu = ({ sideMenuAlign }) => {
         <Offcanvas show={show} onHide={handleClose} className='sideMenuContainer'>
             <Offcanvas.Header closeButton className='offcanvasHeader'>
                 <Offcanvas.Title href="#home">
-                    <Link to="/">
+                    <Link to="/" onClick={handleClose}>
                     <img src="https://raw.githubusercontent.com/robmrivas/coder-react/main/src/img/logo.svg" alt="IKEA logo" />
                     </Link>
                 </Offcanvas.Title>
@@ -28,13 +28,13 @@ const SideMenu = ({ sideMenuAlign }) => {
             <Offcanvas.Body>
                 <ul className="navChoices">
                     <li>
-                        <NavLink to="/category/Chairs">Chairs</NavLink>
+                        <NavLink to="/category/Chairs" onClick={handleClose}>Chairs</NavLink>
                     </li>
                     <li>
-                        <NavLink to="/category/Desks">Desks</NavLink>
+                        <NavLink to="/category/Desks" onClick={handleClose}>Desks</NavLink>
                     </li>
                     <li>
-                        <NavLink to="/category/Wardrobes">Wardrobes</NavLink>
+                        <NavLink to="/category/Wardrobes" onClick={handleClose}>Wardrobes</NavLink>
                     </li>
                     {/* <li className='navItemHighlight'><a href="#Products">Products</a></li>
                     <li className='navItemHighlight'><a href="#Rooms">Rooms</a></li>

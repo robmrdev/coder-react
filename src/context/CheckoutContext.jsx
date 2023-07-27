@@ -21,6 +21,8 @@ export const CartProvider = ({children}) => {
 
 
     console.log(shoppingCart)
+    console.log("totalamout"+ totalAmount)
+    console.log('total'+total)
 
     const addProduct = (item, amount) => {
         const checkProduct = shoppingCart.find (prod => prod.item.id === item.id);
@@ -39,14 +41,14 @@ export const CartProvider = ({children}) => {
             });
             setShoppingCart(newCart);
             setTotalAmount(prev => prev + amount);
-            setTotal (prev=> (item.price * amount))
+            setTotal (prev=> prev + (item.price * amount))
         }
     }
 
 
     const deleteProduct = (id) => {
-        const deletedProduct = cart.find (prod => prod.item.id === id);
-        const newCart = cart.filter (prod => prod.item.id !== id);
+        const deletedProduct = shoppingCart.find (prod => prod.item.id === id);
+        const newCart = shoppingCart.filter (prod => prod.item.id !== id);
 
         setShoppingCart (newCart);
         setTotalAmount (prev => prev - deletedProduct.amount);

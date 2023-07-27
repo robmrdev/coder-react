@@ -20,13 +20,15 @@ const Counter = ({stock, initial, addToCart}) => {
 
 
   return (
-    <div className="counter">
-        <button onClick={decreaseCounter}> - </button>
-        <strong> {counter} </strong>
-        <button onClick={addCounter}> + </button>
+    <span className="counter">
+        <div className="counterAmount">
+            <i className="fi fi-br-minus-small" onClick={decreaseCounter}></i>
+            <strong> {counter} </strong>
+            <i className="fi fi-br-plus-small" onClick={addCounter}></i>
+        </div>
 
-        <button onClick={() => addToCart(counter)}> Add to Cart</button>
-    </div>
+        <button onClick={() => addToCart(counter)}> Add {counter} items to cart</button>
+    </span>
   )
 }
 

@@ -1,3 +1,31 @@
 .counter{
     margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+.counterAmount{
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    border-radius: 64px;
+    border: 1px solid black;
+    padding: 5px 10px;
+}
+.counterAmount i{
+    padding-top: 8px;
+    margin: 5px;
+    font-size: 22px;
+}
+.counterAmount strong{
+    padding: 0 7px;
+}
+
+.counter button{
+    border-radius: 64px;
+    width: 100%;
+    background-color: rgb(0, 88, 163);
+    border: none;
+    color: white;
+    font-weight: bold;
 }

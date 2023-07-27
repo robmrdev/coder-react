@@ -4,6 +4,8 @@ import CartWidget from './CartWidget/CartWidget';
 import SideMenu from './SideMenu/SideMenu';
 import './NavBar.css';
 import { Link, NavLink } from 'react-router-dom';
+import { useState } from 'react';
+import LogInButton from './LogInButton/LogInButton';
 
 const NavBar = () => {
 
@@ -23,7 +25,7 @@ const NavBar = () => {
             <span className='navIcons'>
                 <div className='navLogIn'>
                   <i className="fi fi-br-user"></i>
-                  <strong>Log in or sign up</strong>
+                  <LogInButton/>
                 </div>
                 <i className="fi fi-br-heart"></i>          
                 <CartWidget/>
