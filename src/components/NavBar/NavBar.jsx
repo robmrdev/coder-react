@@ -16,7 +16,7 @@ const NavBar = () => {
       <header>
           <div className='headBarContainer'>
             <Link to="/">
-              <img src="https://raw.githubusercontent.com/robmrivas/coder-react/main/src/img/logo.svg" alt="IKEA logo" />
+              <img src="../img/logo.svg" alt="IKEA logo" />
             </Link>
             <div className="searchBox">
                 <input type="search" placeholder="What are you looking for?"></input>

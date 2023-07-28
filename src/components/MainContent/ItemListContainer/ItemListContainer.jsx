@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import "./ItemListContainer.css";
-// import { getProductos, getProductosPorCategoria } from "../../../asyncmock";
 import ItemList from "../ItemList/ItemList";
 import { useParams } from "react-router-dom";
 
@@ -13,11 +12,6 @@ const ItemListContainer = ({ greeting }) => {
 
     const { idCategory } = useParams();
 
-    // useEffect (()=> {
-    //   const funcion = idCategory ? getProductosPorCategoria : getProductos;
-    //   funcion(idCategory)
-    //   .then(res => setProductos(res))
-    // }, [idCategory])
 
     useEffect(() => {
         const renderItems = idCategory ? query(collection(db, "products"), where("idCat", "==", idCategory)) : collection(db, "products");

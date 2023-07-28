@@ -22,13 +22,12 @@ const CartItem = ({item, amount}) => {
 
     // }
 
-    console.log(img)
 
   return (
     <div>
 {/*         
         {itemImg} */}
-        <p> {item.img[1]}</p>
+        <img src={item.img[0]} alt={item.name} />
         <p> Amount: {amount} </p>
         <p> Price: {item.price}</p>
         <p> Id: {item.id}</p>

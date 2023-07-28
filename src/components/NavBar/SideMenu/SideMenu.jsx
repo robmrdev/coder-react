@@ -21,7 +21,7 @@ const SideMenu = ({ sideMenuAlign }) => {
             <Offcanvas.Header closeButton className='offcanvasHeader'>
                 <Offcanvas.Title href="#home">
                     <Link to="/" onClick={handleClose}>
-                    <img src="https://raw.githubusercontent.com/robmrivas/coder-react/main/src/img/logo.svg" alt="IKEA logo" />
+                    <img src="../img/logo.svg" alt="IKEA logo" />
                     </Link>
                 </Offcanvas.Title>
             </Offcanvas.Header>
