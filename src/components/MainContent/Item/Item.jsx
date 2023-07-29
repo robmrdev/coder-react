@@ -21,7 +21,10 @@ const Item = ({ id, img, name, price, description }) => {
           </Link>
           <strong className="itemName">{name}</strong>
           <p className="itemDescription">{description}</p>
-          <strong className="itemPrice">€ {price}</strong>
+          <div className='priceContainer'>
+              <i className="fi fi-br-euro"></i>
+              <h3>{price}.-</h3>
+            </div>
           <div className="itemsButtons">
             <i className="fi fi-br-basket-shopping-simple"></i>
             <i className="fi fi-br-heart"></i>

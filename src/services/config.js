@@ -4,7 +4,7 @@ import { getFirestore } from "firebase/firestore";
 
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBZOBkGktJ7XZqVWNsyFL0CFCyXwStogLk",
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
   authDomain: "fakeikea2023.firebaseapp.com",
   projectId: "fakeikea2023",
   storageBucket: "fakeikea2023.appspot.com",

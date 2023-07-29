@@ -6,8 +6,15 @@
     padding-right: 2.5rem;
 }
 
-.itemDetalImgs{
+.itemDetailImgs{
     grid-column: 1/9;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.itemDetailImgs img {
+    width: 25vw;
+    margin: 20px;
 }
 
 .itemDetailInfo{

@@ -1,0 +1,62 @@
+.cartItem{
+    display: flex;
+    width: 100%;
+    margin-top: 10vh;
+
+}
+.cartItem hr{
+    width: 100%;
+}
+.cartItemImg {
+    padding: 20px 40px 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.cartItemImg img{
+    width: 140px;
+}
+.cartItemImg strong{
+    background-color: lightgrey;
+    padding: 3px 15px;
+    font-size: 14px;
+    margin-top: 10px;
+}
+.cartItemInfo{
+    display: grid;
+    grid-row-gap: 1.25rem;
+    grid-template-rows: repeat(1,fit-content(100px) [row-start] 100px [row-end]);
+    grid-template-columns: auto auto;
+    width: 100%;
+}
+
+.cartItemPrice{
+    display: flex;
+    justify-content: end;
+}
+
+
+.cartItemName{
+    font-size: 2.8vh;
+}
+.itemOptions{
+    display: grid;
+    grid-template-columns: repeat 3fr;
+}
+.itemOptions .counter{
+    grid-column: 1/2;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+.itemOptions .counter .counterAmount {
+    height: 40px;
+}
+
+.itemOptions p{
+    grid-column: 2/3;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    color: grey;
+}

@@ -15,7 +15,7 @@ const ItemDetail = ({id,img, name, price, description, idCat, stock}) => {
 
   const handlerAmount = (amount) => {
     setAddItems (amount);
-    const item = {id, name, price, img};
+    const item = {id, name, price, img, idCat, description, stock, amount};
     addProduct(item, amount);
   }
 
@@ -30,7 +30,7 @@ const ItemDetail = ({id,img, name, price, description, idCat, stock}) => {
   return (
     <main>
         <div className='itemDetail'>
-          <div className='itemDetalImgs'>
+          <div className='itemDetailImgs'>
 
 
           {itemImg}

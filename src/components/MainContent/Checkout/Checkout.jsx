@@ -77,12 +77,13 @@ const Checkout = () => {
   return (
 
 
-    <div>
+    <main>
+      <div className="mainContainer">
       <h2>CheckOut</h2>
       <form onSubmit={formHandler}>
         {
           shoppingCart.map(i => (
-            <div key={i.item.id}>
+            <div key={i.item.id} className="checkOutItem">
               <img
                 src={hoveredId === i.item.id ? i.item.img[1] : i.item.img[0]}
                 alt={i.item.name}
@@ -132,7 +133,8 @@ const Checkout = () => {
           <strong> Thanks for shooping with us! Your order Id is {orderId}</strong>
         )
       }
-    </div>
+      </div>
+    </main>
   )
 }
 
