@@ -107,11 +107,17 @@ const Checkout = () => {
                 <label htmlFor=""> Confirm email </label>
                 <input type="email" value={emailConfirm} onChange={(e) => setEmailConfirm(e.target.value)} />
               </div>
+            
             </div>
 
             {
-              error && <p>{error}</p>
-            }
+          error && <p className="centerMsj">{error}</p>
+        } 
+        {
+          orderId && (
+            <strong className="centerMsj"> Thanks for shooping with us! Your order Id is {orderId}</strong>
+          )
+        }
             <div className="checkoutButtonContainer">
               <button type="submit" className="checkoutButton"> Finish </button>
             </div>
@@ -128,6 +134,7 @@ const Checkout = () => {
                       onMouseEnter={() => setHoveredId(i.item.id)}
                       onMouseLeave={() => setHoveredId(null)}
                       className={hoveredId === i.item.id ? "hoverItemImg" : ""}
+                      key={i.item.id}
                     />
                 ))
               }
@@ -159,11 +166,6 @@ const Checkout = () => {
             </div>
           </div>
         </div>
-        {
-          orderId && (
-            <strong> Thanks for shooping with us! Your order Id is {orderId}</strong>
-          )
-        }
       </div>
     </main>
   )

@@ -13,7 +13,7 @@
 }
 
 .itemDetailImgs img {
-    width: 25vw;
+    width: calc((100% / 2) - 3rem);
     margin: 20px;
 }
 
@@ -105,4 +105,22 @@
     display: flex;
     justify-content: center;
     margin-top: 20px;
+}
+
+
+@media screen and (max-width: 1200px){
+    .itemDetailImgs{
+        grid-column: 1/8;
+    }
+    .itemDetailInfo{
+        grid-column: 8/13;
+    }
+}
+@media screen and (max-width: 900px){
+    .itemDetailImgs{
+        grid-column: 1/13;
+    }
+    .itemDetailInfo{
+        grid-column: 1/13;
+    }
 }

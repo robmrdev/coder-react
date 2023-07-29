@@ -4,11 +4,15 @@
     grid-row-gap: 1.25rem;
     grid-template-columns: repeat(12,minmax(0,1fr));
 }
+.shoppingHr {
+    grid-column: 1/13;
+    margin-right: 30px;
+}
 .cartContainer h1{
     grid-column: 1/8;
     margin-top: 20px;
 }
-.cartContainer hr{
+.orderSummary hr{
     grid-column: 1/8;
 }
 .orderItems{
@@ -52,4 +56,23 @@
     height: 2.5rem;
     border-radius: 64px;
     font-size: 20px;
+}
+
+
+@media screen and (max-width: 1200px){
+    .orderItems{
+        grid-column: 1/8;
+        margin-right: 30px;
+    }
+    .orderSummary{
+        grid-column: 8/13;
+    }
+}
+@media screen and (max-width: 900px){
+    .orderItems{
+        grid-column: 1/13;
+    }
+    .orderSummary{
+        grid-column: 1/13;
+    }
 }

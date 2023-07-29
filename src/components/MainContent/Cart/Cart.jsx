@@ -27,9 +27,8 @@ const Cart = () => {
         <main>
             <div className='mainContainer cartContainer'>
                 <h1>Shopping Cart</h1>
-                <hr />
+                <hr className='shoppingHr'/>
                 <div className='orderItems'>
-
                     {shoppingCart.map((cartItem) => (
                         <CartItem key={cartItem.item.id} item={cartItem.item} amount={cartItem.amount} />
                     ))}
@@ -41,7 +40,7 @@ const Cart = () => {
                             <p>Amount of items</p>
                             <p>{totalAmount}</p>
                         </div>
-                    <hr />
+                    <hr style={{border: "1px solid rgb(0, 0, 0)", opacity:1}}/>
                         <div className='cartTotal'>
                             <strong>Total</strong>
                             <div className='priceContainer cartItemPrice'>
@@ -49,7 +48,6 @@ const Cart = () => {
                                 <h3>{total}.-</h3>
                             </div>
                         </div>
-                        
                     <hr />
                         <p onClick={() => emptyCart()}> Empty Cart </p>
                         <Link to="/checkout" className='continueCheckout'>

@@ -2,6 +2,10 @@
     
     grid-column: 1/8;
 }
+.cartContainer>hr{
+    grid-column: 1/13;
+    margin-right: 40px;
+}
 .checkoutSummary img {
     width: 50px;
 }
@@ -29,3 +33,18 @@
     height: 50px;
 }
 
+.centerMsj{
+    text-align: center;
+}
+
+@media screen and (max-width: 900px){
+    .cartContainer form{
+        grid-column: 1/13;
+        margin-left: -60px;
+        margin-right: 10px;
+    }
+    .cartContainer>hr{
+        grid-column: 1/13;
+        margin-right: 40px;
+    }
+}
