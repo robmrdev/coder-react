@@ -2,6 +2,7 @@ import { useState, useContext } from "react"
 import { CheckoutContext } from "../../../context/CheckoutContext"
 import { db } from "../../../services/config";
 import { collection, addDoc, updateDoc, doc, getDoc } from "firebase/firestore";
+import './Checkout.css'
 
 
 
@@ -15,6 +16,7 @@ const Checkout = () => {
   const [error, setError] = useState("");
   const { shoppingCart, total, totalAmount, emptyCart } = useContext(CheckoutContext);
   const [hoveredId, setHoveredId] = useState(null);
+
 
 
   const formHandler = (e) => {
@@ -79,60 +81,89 @@ const Checkout = () => {
 
     <main>
       <div className="mainContainer">
-      <h2>CheckOut</h2>
-      <form onSubmit={formHandler}>
-        {
-          shoppingCart.map(i => (
-            <div key={i.item.id} className="checkOutItem">
-              <img
-                src={hoveredId === i.item.id ? i.item.img[1] : i.item.img[0]}
-                alt={i.item.name}
-                onMouseEnter={() => setHoveredId(i.item.id)}
-                onMouseLeave={() => setHoveredId(null)}
-                className={hoveredId === i.item.id ? "hoverItemImg" : ""}
-              />
-              <p>{i.item.name} x {i.amount}</p>
-              <p>Price: {i.item.price}</p>
-              <hr />
-            </div>
-          ))
+        <div className="cartContainer">
+          <h1>CheckOut</h1>
           
-        }
-        <hr />
-        
-        <p>Total Amount: {totalAmount} </p>
+          <hr />
+          <form onSubmit={formHandler}>
+            <div className="checkoutForm">
+              <div>
+                <label htmlFor=""> Name </label>
+                <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
+              </div>
+              <div>
+                <label htmlFor=""> Last name </label>
+                <input type="text" value={lastName} onChange={(e) => setLastName(e.target.value)} />
+              </div>
+              <div>
+                <label htmlFor=""> Phone Number </label>
+                <input type="number" value={phone} onChange={(e) => setPhone(e.target.value)} />
+              </div>
+              <div>
+                <label htmlFor=""> Email </label>
+                <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+              </div>
+              <div>
+                <label htmlFor=""> Confirm email </label>
+                <input type="email" value={emailConfirm} onChange={(e) => setEmailConfirm(e.target.value)} />
+              </div>
+            </div>
 
-        <div>
-          <label htmlFor=""> Name </label>
-          <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
-        </div>
-        <div>
-          <label htmlFor=""> Last name </label>
-          <input type="text" value={lastName} onChange={(e) => setLastName(e.target.value)} />
-        </div>
-        <div>
-          <label htmlFor=""> Phone Number </label>
-          <input type="number" value={phone} onChange={(e) => setPhone(e.target.value)} />
-        </div>
-        <div>
-          <label htmlFor=""> Email </label>
-          <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
-        </div>
-        <div>
-          <label htmlFor=""> Confirm email </label>
-          <input type="email" value={emailConfirm} onChange={(e) => setEmailConfirm(e.target.value)} />
-        </div>
+            {
+              error && <p>{error}</p>
+            }
+            <div className="checkoutButtonContainer">
+              <button type="submit" className="checkoutButton"> Finish </button>
+            </div>
+            <hr />
+          </form>
+          <div className='orderSummary checkoutSummary'>
+            <strong>Order Summary</strong>
+            <div>
+              {
+                shoppingCart.map(i => (
+                    <img
+                      src={hoveredId === i.item.id ? i.item.img[1] : i.item.img[0]}
+                      alt={i.item.name}
+                      onMouseEnter={() => setHoveredId(i.item.id)}
+                      onMouseLeave={() => setHoveredId(null)}
+                      className={hoveredId === i.item.id ? "hoverItemImg" : ""}
+                    />
+                ))
+              }
+            </div>
+            <div className='summaryContainer'>
+              <div className='cartTotal'>
+                <p>Amount of items</p>
+                <p>{totalAmount}</p>
+              </div>
+              <div className='cartTotal'>
+                <p>Subtotal excluding TAX</p>
+                <p>{(total-(total * 0.21)).toFixed(2)}</p>
+              </div>
+              <div className='cartTotal'>
+                <p>TAX (21%) </p>
+                <p>{(total * 0.21).toFixed(2)}</p>
+              </div>
+              <hr />
+              <div className='cartTotal'>
+                <strong>Total</strong>
+                <div className='priceContainer cartItemPrice'>
+                  <i className="fi fi-br-euro"></i>
+                  <h3>{total}.-</h3>
+                </div>
+              </div>
 
+              <hr />
+              <p onClick={() => emptyCart()}> Empty Cart </p>
+            </div>
+          </div>
+        </div>
         {
-          error && <p>{error}</p>
+          orderId && (
+            <strong> Thanks for shooping with us! Your order Id is {orderId}</strong>
+          )
         }
-        <button type="submit"> Finish </button>
-      </form>
-      {
-        orderId && (
-          <strong> Thanks for shooping with us! Your order Id is {orderId}</strong>
-        )
-      }
       </div>
     </main>
   )

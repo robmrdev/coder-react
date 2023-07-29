@@ -15,7 +15,7 @@ const Cart = () => {
     if (totalAmount === 0) {
         return (
             <main>
-                <div className='cartContainer'>
+                <div className='mainContainer cartContainer'>
                     <h2>Cart Empty</h2>
                     <Link to="/">Home</Link>
                 </div>
