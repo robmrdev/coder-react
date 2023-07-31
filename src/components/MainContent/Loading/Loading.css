@@ -1,0 +1,10 @@
+.loadingContainer{
+    position: relative;
+    height: calc(100vh - 102.3px);
+}
+.loading{
+    position: absolute;
+    width: 70px;
+    top: 30%;
+    left: calc(50% - 35px);
+}

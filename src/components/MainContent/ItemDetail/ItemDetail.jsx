@@ -4,7 +4,8 @@ import Counter from '../Counter/Counter';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { CheckoutContext } from '../../../context/CheckoutContext';
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
+import Loading from '../Loading/Loading';
 
 
 
@@ -12,6 +13,16 @@ const ItemDetail = ({id,img, name, price, description, idCat, stock}) => {
 
   const [addItems, setAddItems] = useState (0);
   const {addProduct} = useContext (CheckoutContext);
+  const [loading, SetLoading] = useState (true)
+
+  useEffect (()=> {
+    const loadingTimer = () => {
+      setTimeout (()=>{
+        SetLoading(false)
+      },1500)
+    }
+    loadingTimer()
+  },[])
 
   const handlerAmount = (amount) => {
     setAddItems (amount);
@@ -22,20 +33,16 @@ const ItemDetail = ({id,img, name, price, description, idCat, stock}) => {
   const itemImg = Array.isArray(img) && img.length > 0 ? (
     img.map((imageUrl, index) => (
       <img key={index} src={imageUrl} alt={`Product ${name} - Image ${index}`} />
-    ))
+    ) )
   ) : (
     <span>No images available</span>
   )
-
+  if (loading) return <Loading/>
   return (
     <main>
         <div className='itemDetail'>
           <div className='itemDetailImgs'>
-
-
           {itemImg}
-
-
           </div>
           <div className='itemDetailInfo'>
             <div className='topInfoContainter'>

@@ -5,10 +5,10 @@ import { db } from "../../../services/config";
 import { getDoc, doc } from "firebase/firestore";
 
 
-
 const ItemDetailContainer = () => {
     const [product, setProduct] = useState (null);
     const {idItem} = useParams();
+    const [loading, setLoading] = useState(true)
 
     useEffect( () => {
         const newDoc = doc(db, "products", idItem);
@@ -20,8 +20,9 @@ const ItemDetailContainer = () => {
           setProduct(newItem);
         })
         .catch(error => console.log(error))
+        setLoading(false)
     }, [idItem])
-
+if (loading) return <p>LOADING</p>
   return (
     <ItemDetail {...product}/>
   )

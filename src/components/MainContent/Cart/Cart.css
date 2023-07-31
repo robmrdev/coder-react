@@ -8,6 +8,13 @@
     grid-column: 1/13;
     margin-right: 30px;
 }
+.emptyCart{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: calc(100vh - 90px);
+    padding-top: 30vh;
+}
 .cartContainer h1{
     grid-column: 1/8;
     margin-top: 20px;
@@ -22,6 +29,9 @@
     grid-column: 9/13;
     padding-right: 40px;
     margin-left:  -20px;
+    position: sticky;
+    max-height: calc(100vh - 20px);
+    top: 20px;
 }
 .summaryContainer{
     position: sticky;
